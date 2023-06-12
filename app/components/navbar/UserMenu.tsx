@@ -1,21 +1,21 @@
 'use client';
-
+import { SafeUser } from "@/app/types";
 import { AiOutlineMenu } from "react-icons/ai";
 import Avatar from "../Avatar";
 import { useCallback, useState } from "react";
 import MenuItem from "./MenuItem";
 import useRegisterModal from "@/app/hooks/useRegisterModal";
 import useLoginModal from "@/app/hooks/useLoginModal";
-import { SafeUser } from "@/app/types";
 import { signOut } from "next-auth/react";
 
 interface UserMenuProps {
-    currentUser?: SafeUser | null
-  }
+  currentUser?: SafeUser | null
+}
   
-  const UserMenu: React.FC<UserMenuProps> = ({
-    currentUser
-  }) => {
+const UserMenu: React.FC<UserMenuProps> = ({
+  currentUser
+}) => {
+    console.log({currentUser});
     const registerModal = useRegisterModal();
     const loginModal = useLoginModal();
     const [isOpen, setIsOpen] = useState(false);
@@ -82,7 +82,8 @@ interface UserMenuProps {
                   onClick={registerModal.onOpen}
                 />
               </>
-            )}
+            )
+            }
           </div>
 
             </div>
