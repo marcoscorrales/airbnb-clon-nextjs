@@ -33,22 +33,23 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
         {({ open }) => {
             return(
                 <div onClick={() => open?.()}
-                className="relative
+                className="
+                relative
                 cursor-pointer
                 hover:opacity-70
                 transition
-                border-dashed
-                border-2
-                p-20
+                border-dashed 
+                border-2 
+                p-20 
                 border-neutral-300
                 flex
                 flex-col
                 justify-center
-                item-center
+                items-center
                 gap-4
                 text-neutral-600
-                "
-                >
+              "
+            >
                     <TbPhotoPlus size={50} />
                     <div className="font-semibold text-lg">
                         Click to upload
@@ -58,7 +59,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
                             <Image
                                 alt="Upload"
                                 fill
-                                style={{objectFit: 'cover'}}
+                                style={{ objectFit: 'cover'}}
                                 src={value}
                             />
                         </div>
