@@ -41,6 +41,7 @@ const ReservationsPage = async () => {
                 currentUser={currentUser}
             />
         </ClientOnly>
+    )
 }
 
 export default ReservationsPage;
